@@ -1,0 +1,480 @@
+/* 全局设置 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* 顶部固定导航栏 */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 确保 logo 垂直居中 */
+    padding: 10px 20px;
+    z-index: 100;
+    height: 80px; /* 设置固定的高度 */
+}
+
+.header-item {
+    color: white;
+    padding: 10px;
+}
+
+.header-logo {
+    height: 60px;
+}
+
+#search-bar input {
+    padding: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* 左侧标签栏 */
+#tabs {
+    position: fixed;
+    top: 80px; /* 让标签栏不再被导航栏遮挡 */
+    left: 0;
+    width: 200px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* 允许内容滑动 */
+}
+
+.tab-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.selected {
+    background-color: rgba(128, 0, 128, 0.3); /* 更深的紫色 */
+}
+
+/* 右侧内容区域 */
+#content {
+    margin-left: 220px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+    margin-bottom: 20px;
+    overflow-y: auto; /* 允许内容滑动 */
+    max-height: 80vh; /* 限制高度 */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* 标签内容部分的分离样式：背景图和文字框分开 */
+.header-image {
+    margin-bottom: 10px;
+}
+
+.tag-background {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 文字框内容 */
+.content-text {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 400vh; /* 最大高度 */
+    margin-top: -180px; /* 向上调整文字框的位置（更靠近顶部） */
+    z-index: 10; /* 保证文字在背景上方 */
+    pointer-events: auto; /* 启用鼠标事件，避免鼠标悬停时无响应 */
+}
+
+/* 文字框标题 */
+.content-text h2 {
+    font-size: 24px;
+}
+
+/* 样式：紫色字体、划掉字体、鼠标悬停显示隐藏文字 */
+.jump-link {
+    color: rgb(206, 29, 206);
+    text-decoration: none;
+}
+
+.jump-link:hover {
+    text-decoration: underline;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.hover-text {
+    color: transparent;
+    border-bottom: 2px dashed transparent;
+    transition: all 0.3s;
+}
+
+.hover-text:hover {
+    color: black;
+    border-bottom: 2px dashed black;
+}
+
+.hover-alpha {
+    color: transparent; /* 文字颜色透明 */
+    transition: all 0.3s; /* 添加过渡效果 */
+}
+
+.hover-alpha:hover {
+    color: black; /* 悬停时文字变为黑色 */
+    /* 去掉 border-bottom，保持没有下划线 */
+}
+
+/* 版权声明 */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* 鼠标悬停放大效果 */
+.header-item:hover,
+.tab:hover,
+#follow-us:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#follow-us img {
+    width: 30px;
+    transition: width 0.3s ease-in-out;
+}
+
+#follow-us:hover img {
+    width: 35px;
+}
+
+/* 新窗口展示（点击logo） */
+.new-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: absolute; /* 保证它在页面中绝对居中 */
+    top: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    flex-direction: column;
+    font-family: "Arial", sans-serif;
+}
+
+.new-window h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.new-window .emoji {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.new-window p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.new-window p.small {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* 修改搜索框样式 */
+#search-bar input {
+    margin-left: -10px;  /* 设置左边距 */
+    transition: all 0.3s ease;
+}
+
+/* 搜索结果区域 */
+#search-results {
+    position: absolute; /* 定位为绝对定位 */
+    top: 100%; /* 搜索结果显示在搜索框下方 */
+    left: 0; /* 左对齐 */
+    width: 100%; /* 宽度占满父元素 */
+    background-color: white; /* 背景颜色为白色 */
+    border: 1px solid #ddd; /* 设置边框颜色为灰色 */
+    border-top: none; /* 移除顶部边框 */
+    display: none; /* 默认隐藏搜索结果 */
+    padding: 5px; /* 内边距 */
+}
+
+/* 搜索结果项的样式 */
+#search-results .search-result {
+    padding: 8px; /* 每一项的内边距 */
+    cursor: pointer; /* 鼠标悬停时变为点击指针 */
+}
+
+/* 搜索结果项的悬停效果 */
+#search-results .search-result:hover {
+    background-color: #f4f4f4; /* 悬停时背景变色 */
+}
+
+/* 父级标签样式 */
+.parent-tag {
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.parent-tag-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+/* 名言部分 */
+.quote {
+    margin: 40px 0;  /* 让名言区域和其他内容有足够的间距 */
+    text-align: center;  /* 使名言居中 */
+    font-size: 28px;  /* 适当增大字体 */
+    font-weight: bold;
+    position: relative;
+    display: inline-block; /* 让引号和文字成为一个整体 */
+}
+
+/* 引号 */
+.quote-symbol {
+    color: purple;  /* 引号使用紫色 */
+    font-size: 80px;  /* 引号字体非常大 */
+    vertical-align: middle;  /* 让引号与文字垂直居中 */
+}
+
+/* 名言文字 */
+.quote-text {
+    display: inline-block;  /* 让文字与引号成为同行 */
+    font-size: 32px;  /* 更大的文字 */
+    font-family: "Georgia", serif;  /* 更适合名言的字体 */
+    line-height: 1.5;
+    font-weight: bold;  /* 名言文字加粗 */
+    color: #333;  /* 文字颜色 */
+}
+
+.quote-content {
+    display: inline;  /* 确保文字与引号同行 */
+}
+
+/* 修改：让引号和文字更紧密 */
+.quote-symbol:first-child {
+    margin-right: 10px;  /* 左侧引号与文字之间的间距 */
+}
+
+.quote-symbol:last-child {
+    margin-left: 10px;  /* 右侧引号与文字之间的间距 */
+}
+
+/* 插图和表格样式 */
+.character-info {
+    display: flex; /* 使用Flexbox来布局 */
+    flex-direction: column; /* 竖直排列插图和表格 */
+    align-items: flex-end; /* 右对齐 */
+    margin-top: -520px; /* 上移520px，位置调整 */
+    flex-wrap: wrap; /* 允许内容换行 */
+    margin-right: 80px; /* 向左移动20px */
+    pointer-events: auto; /* 启用鼠标事件，避免鼠标悬停时无响应 */
+}
+
+/* 插图部分样式 */
+.character-image {
+    width: 200px; /* 设置插图宽度 */
+    height: auto; /* 自动调整高度 */
+    margin-bottom: 20px; /* 插图与表格之间的间距，减少间距 */
+    z-index: 20;
+}
+
+/* 插图的图片样式 */
+.character-image img {
+    width: 100%; /* 使插图填满容器宽度 */
+    height: auto; /* 保持比例 */
+    z-index: 20;
+}
+
+/* 总结框样式 */
+.character-title {
+    background-color: #330033; /* 深紫色背景 */
+    color: white; /* 白色文字 */
+    text-align: center; /* 文字居中 */
+    padding: 10px; /* 内边距 */
+    order: -2; /* 将总结框移动到插图上方 */
+    width: 90%; /* 确保紫色框占满容器 */
+}
+
+/* 紫色框样式 */
+.character-name {
+    background-color: #800080; /* 深紫色背景 */
+    color: white; /* 白色文字 */
+    font-weight: bold; /* 使文字加粗 */
+    text-align: center; /* 文字居中 */
+    padding: 15px; /* 内边距 */
+    order: -1; /* 将紫色框移动到插图上方 */
+    width: 85%; /* 确保紫色框占满容器 */
+    margin-bottom: 5px; /* 插图与紫色框之间的间距，减少间距 */
+}
+
+/* 表格样式 */
+.character-table {
+    width: 200px; /* 表格宽度 */
+    margin-bottom: 10px; /* 表格与其他内容之间的间距，减少间距 */
+    flex-shrink: 0; /* 防止表格被压缩 */
+    position: relative; /* 保证表格与其他内容不会重叠 */
+    z-index: 15; /* 确保表格层级高于插图，避免被覆盖 */
+    pointer-events: auto; /* 确保表格接受鼠标事件 */
+}
+
+/* 表格样式 */
+.character-table table {
+    width: 100%; /* 表格宽度占满容器 */
+    border-collapse: collapse; /* 边框合并 */
+}
+
+.character-table td {
+    padding: 6px; /* 表格单元格内边距，减少上下间距 */
+    border: 1px solid #312020; /* 灰色边框 */
+    text-align: left; /* 文字左对齐 */
+}
+
+/* 第一列的样式 */
+.character-table td:first-child {
+    width: 30%; /* 设置第一列宽度 */
+    background-color: #e9be89; /* 深橙色背景 */
+    color: rgb(49, 20, 0); /* 文字颜色为白色 */
+}
+
+/* 第二列的样式 */
+.character-table td:nth-child(2) {
+    width: 80%; /* 设置第二列宽度 */
+    background-color: #ffffff; /* 淡橙色背景 */
+    color: black; /* 文字颜色为黑色 */
+}
+
+
+/* 署名（锦鲤酱） */
+.quote-author {
+    text-align: left; /* 默认靠左 */
+    font-size: 1em; /* 设置字体大小 */
+    color: #888; /* 设置文字颜色 */
+    margin-top: -50px; /* 上方的间距，可以调整 */
+    margin-bottom: 10px; /* 下方的间距，可以调整 */
+    margin-left: 400px; /* 默认左边距调整，可以改成你想要的数值 */
+}
+
+/* 署名（小涵） */
+.quote-author2 {
+    text-align: left; /* 默认靠左 */
+    font-size: 1em; /* 设置字体大小 */
+    color: #888; /* 设置文字颜色 */
+    margin-top: -50px; /* 上方的间距，可以调整 */
+    margin-bottom: 10px; /* 下方的间距，可以调整 */
+    margin-left: 550px; /* 默认左边距调整，可以改成你想要的数值 */
+}
+
+/* 弹出框样式 */
+.popup {
+    display: none; /* 默认不显示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    z-index: 1000; /* 确保弹出框在所有内容上方 */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .text-box {
+    border: 5px solid #d3d3d3; /* 浅灰色边框 */
+    padding: 5px; /* 添加一些内边距 */
+    background-color: #f9f9f9; /* 可选：浅灰色背景 */
+}
+
+  
+  /* 弹入动画 */
+@keyframes pop-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 表格绘制动画 */
+@keyframes draw-table {
+    from {
+        border: 1px solid transparent;
+    }
+    to {
+        border: 1px solid #ddd;
+    }
+}
