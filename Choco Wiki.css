@@ -411,6 +411,16 @@ body {
     margin-left: 550px; /* 默认左边距调整，可以改成你想要的数值 */
 }
 
+/* 署名（白梓TeAm） */
+.quote-author（TeAm） {
+    text-align: left; /* 默认靠左 */
+    font-size: 1em; /* 设置字体大小 */
+    color: #888; /* 设置文字颜色 */
+    margin-top: -50px; /* 上方的间距，可以调整 */
+    margin-bottom: 10px; /* 下方的间距，可以调整 */
+    margin-left: 350px; /* 默认左边距调整，可以改成你想要的数值 */
+}
+
 /* 弹出框样式 */
 .popup {
     display: none; /* 默认不显示 */
@@ -455,7 +465,6 @@ body {
     padding: 5px; /* 添加一些内边距 */
     background-color: #f9f9f9; /* 可选：浅灰色背景 */
 }
-
   
   /* 弹入动画 */
 @keyframes pop-in {

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choco Wiki</title>
+    <link rel="stylesheet" href="Choco Wiki.css">
+</head>
+<body>
+    <!-- 顶部固定导航栏 -->
+    <header id="header">
+        <div id="logo" class="header-item">
+            <img src="图片\Choco Wiki.png" alt="Logo" class="header-logo">
+        </div>
+        <div id="category" class="header-item">
+            <p>分类</p>
+        </div>
+
+        <!-- 多语言选项按钮 -->
+        <div id="language-selector" class="header-item" style="cursor: pointer; padding-right: 20px;">
+            <p onclick="toggleLanguageMenu()">多语言选项</p>
+        </div>
+
+        <div id="follow-us" class="header-item">
+            <p>关注我们</p>
+        </div>
+
+        <div id="search-bar">
+            <input type="text" id="search" placeholder="搜索...">
+            <div id="search-results"></div>
+        </div>
+    </header>
+
+    <!-- 左侧标签栏 -->
+    <aside id="tabs">
+        <!-- 父级标签1 - 人物 -->
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                人物 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="koko">Fish锦鲤酱</div>
+                <div class="tab" id="yuhan">小涵QwQ</div>
+                <div class="tab" id="Cian">辞安</div>
+            </div>
+        </div>
+
+        <!-- 父级标签2 - 相关团体 -->
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                相关团体 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="BaiZi">白梓TeAm</div>
+            </div>
+        </div>
+
+        <!-- 父级标签3 - 音乐作品等 -->
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                音乐作品 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="color-sea">彩海</div>
+                <div class="tab" id="Future-Windows">未来窗</div>
+                <div class="tab" id="Chinese-J-pop">京城誓言</div>
+                <div class="tab" id="tag2">绝对世界</div>
+                <div class="tab" id="tag2">恋爱守护使</div>
+                <div class="tab" id="tag2">冰块冰块</div>
+                <div class="tab" id="tag2">夜晚斗争</div>
+            </div>
+        </div>
+
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                视频系列 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="tag2">生物死刑</div>
+                <div class="tab" id="tag2">一天一世界</div>
+                <div class="tab" id="tag2">脑洞空间</div>
+                <div class="tab" id="tag2">锦鲤Da整活！</div>
+            </div>
+        </div>
+
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                文学作品 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="Zhe-Yue">折跃愿存星</div>
+                <div class="tab" id="Ni">拟世</div>
+                <div class="tab" id="In-World">里世界</div>
+                <div class="tab" id="Future-side">未来基站</div>
+                <div class="tab" id="tag2">书页栈道</div>
+                <div class="tab" id="[0]">消失</div>
+                <div class="tab" id="tag2">寻风集</div>
+                <div class="tab" id="tag2">正纪</div>
+                <div class="tab" id="tag2">寻雨录</div>
+            </div>
+        </div>
+
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                独立游戏 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+            </div>
+        </div>
+
+        <!-- 添加更多的父级标签 -->
+        <div class="parent-tag">
+            <div class="parent-tag-header">
+                网站 <span class="parent-tag-icon">≡</span>
+            </div>
+            <div class="child-tags">
+                <div class="tab" id="tag2">可可百科</div>
+                <div class="tab" id="tag2">生物死刑</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- 右侧内容区域 -->
+    <main id="content">
+        <!-- 可可酱内容 -->
+        <div id="koko-content" class="tab-content">
+            <div class="header-image">
+                <img class="tag-background" src="图片\MC皮肤背景图（锦鲤酱）.png" alt="可可酱背景">
+            </div>
+            <div class="content-text">
+                <h2><strong>Fish锦鲤酱（可可酱）</strong></h2>
+                <small>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</small>
+                <p></p>
+
+                <!-- 名言区域 -->
+                <div class="quote">
+                    <span class="quote-symbol">“</span>
+                    <p class="quote-text">
+                        <span class="quote-content"></span>
+                        <strong>许人以乐，缘作长乐！</strong>
+                    </p>
+                    <span class="quote-symbol">”</span>
+                </div>
+
+                <!-- 小字署名 -->
+                <p class="quote-author">—— 锦鲤酱</p>
+
+                <h2><strong>Fish锦鲤酱（Fish_Lucky / ラッキーちゃん）</strong></h2>
+                <p>通常简称为<strong>锦鲤酱&可可酱</strong>，是<strong>Bilibili</strong>和<strong>YouTube</strong>的知名自媒体创作者。他的频道以创意剧情整活自称，</p>
+                <p>同时还是一名J-Pop创作者和作家，拥有独特的性格和迷人的魅力。</p>
+                <small>注释：锦鲤酱的歌手名称为<strong>诺梓ovo</strong>。<span class="hover-text">但是事实上大家还是叫可可酱比较多，包括百科里面对锦鲤酱的歌手称呼默认都是 #可可酱 </span></small>
+
+                <h2>丨简介丨</h2>
+                <p>本网站的<strong>主角</strong>，<strong>出生于湖南省邵阳市绥宁县。</strong>仅16岁的高中生。<span class="hover-text">人称<strong>思路少女</strong>ヾ(◍°∇°◍)ﾉﾞ</span></p>
+                <p>锦鲤酱的名字源自于自己名字的谐音，象征着幸运。早在西序（<span class="hover-alpha">小学的古称</span>）就已经自称锦鲤了。<span class="hover-text">真是个笨蛋QwQ</span></p>
+                <p>是一名活跃的<strong>UP主&YouTube</strong>，还是<strong>日系音乐流创作者</strong><span style="color: rgb(230, 62, 230);">（J-Pop）</span>和科幻小说家。</p>
+                <p>同时还有一些爱好，比如：绘画、动画、建模、诗集写作、网站编写、下厨和AI交流之类的<span class="hover-alpha">（单纯就是热衷于和AI聊天或者让AI辅助工作）</span></p>
+                <p>主要视频风格是搞笑、整活、脑洞、剧情。<span class="hover-text">事实上很多观众觉得锦鲤酱太呆萌了</span></p>
+                <p>另外一个称呼<strong>可可酱</strong>名字来源于<strong>黑巧克力</strong>以及<span class="jump-link" data-link="https://gochiusa.com/chara/cocoa.html">保登心爱</span>（角色） <span class="strikethrough"style="color: rgb(0, 62, 0);">她是现实中的保登心爱</span></p>
+                <p>主要活跃在<span class="jump-link" data-link="https://space.bilibili.com/531231667">Bilibili</span>和<span class="jump-link" data-link="https://www.youtube.com/@Fish_Lucky">YouTube两个平台</p>
+                <p><span class="hover-text">她是一个天使艺术家💖</span></p> 
+
+                <h2>丨性格特征丨</h2>      
+                <p>个性明亮又开朗，但是有时候也会突然社恐，性格比较<strong>多变</strong>。喜欢热闹，认为身边的人都很重要。</p>
+                <p>喜欢看别人<strong>开心的样子。看见别人开心自己也会开心</strong>，反之不会。</p>
+                <h4><strong> · </strong> 曾自称“宗旨是认识3秒就算朋友了” </h4>
+                <p>性格比较艺术，但是也非常喜欢可爱的事物。对猫咪之类的动物没有抵抗力<span class="strikethrough"style="color: rgb(0, 62, 0);">人类也是</span></p>
+                <p>喜欢尝试各种新的东西，一般想到总是马上就去做。</p>
+                <h4><strong> · </strong> 总是想到很多有趣的事情，然后一做就是一整天，事情就越积越多<span class="hover-text">“拖更的原因”</span></h4>
+                <h4><strong> · </strong> <span class="strikethrough"style="color: rgb(0, 62, 0);">因为好奇西红柿、酱油和辣椒油加在一起是什么味道，于是给自己下毒</span></h4>
+                <h4><strong> · </strong> 那些多元化的技能就是这么来的</h4>
+                <p>有时候会很<strong>细节控</strong>，会在视频各种地方 # 埋彩蛋 或者 #自己的暗示。</p>
+                <p><span style="color: rgb(230, 62, 230);">极端妹控</span>，喜欢照顾<strong>比自己年龄小的人</strong>。不过因为天真和天然的个性，反而总是让周围的人担心。容易冲动惹祸。</p>
+                <p><span class="hover-text">平时还很粘人，总是粘着其他人不放，有时候也挺喜欢被照顾的</span></p>
+
+                <h2>丨体质丨</h2>
+                <p>锦鲤酱是典型的<span style="color: rgb(230, 62, 230);">冒失娘</span>，拥有相当多在天然和冒失方面的体质：</p>
+                <h4><strong> · </strong> 因为录制视频总是冒失忘记一些东西，一直被人以为是<strong>演的或者是故意做节目效果</strong> </h4>
+                <h4><strong> · </strong> 分不太清楚<strong>咖啡的区别</strong>，但是还是爱喝。</strong><span class="hover-text">甚至给自己立下了一天一杯咖啡的目标，甚至喝到有一点免疫了</span></h4>
+                <h4><strong> · </strong> <span style="color: rgb(230, 62, 230);">路痴</span>，迷路时会走循环转圈。有时候甚至找不到车站位置。但是有时候第六感又异常准，一下子就找到了</h4>
+                <h4><strong> · </strong> 经常因为完全不带脑子擅自想到什么做什么而制造烂摊子（ </h4>
+                <h4><strong> · </strong> 贪睡，经常一睡就十个小时起步，早上连设二十个闹钟都叫不醒。<span style="color: rgb(98, 62, 230);">另外睡相不太好。</span><span class="hover-text">甚至闹钟还都无意中被关掉了</span></h4>
+                <p>此外，大家都认为锦鲤酱具有类似魔法的性质。当你祈福的时候，有时候真的会出现好运。<span class="strikethrough"style="color: rgb(0, 62, 0);">所以应该供起来</span></p>
+                <p>
+                    <span id="lucky-magic" style="color: rgb(230, 62, 230); cursor: pointer;">运气魔法使</span>
+                    也因此得名。该名称此后成为了锦鲤酱<strong> [ 像素化人物 ] </strong>的名称。
+                  </p>
+                  
+                  <!-- 弹出的图片区域 -->
+                  <div id="popup" class="popup">
+                    <div class="popup-content">
+                      <span id="close-btn" class="close-btn">&times;</span>
+                      <img src="C:\Users\1\Desktop\图片\运气魔法使（法杖）.png" alt="运气魔法使" />
+                    </div>
+                  </div>
+                  
+                <p><span class="hover-text">身边的朋友都感慨，不愧是异次元的心爱酱</span></p> 
+
+                <h2>丨行为习惯丨</h2>    
+                <p><strong>喜欢创作</strong>，经常会因为突如其来的灵感忙活一整天。每一个作品都会融入新的想法。</p>
+                <p>有时心血来潮就会突然萌生对一些事物的兴趣，因此也学会了很多东西。会花费很多时间打磨自己觉得很重要的作品。</p>
+                <p>喜欢给人送礼物，也喜欢精心制作一些东西出来</p>
+                <h4><span class="strikethrough"style="color: rgb(0, 62, 0);">经常性的作品就开了个头，后面就忘记了。每次回来看都会有一大堆作品库存</span></h4>
+                <p><span class="hover-text">对魔术很感兴趣。小时候的第一个梦想就是想要成为魔法师。</span></p> 
+
+                <h2>丨虚拟人物设定丨</h2> 
+                <h4><strong> a. </strong> 魔法使服装的外面是红色长袍，内衬是白色紫领的短袖。长袍的袖口处有三角形纹饰。长裤是宽松的深蓝色裤子。法杖是木质的，一边圆一边方</h4>
+                <h4><strong> b. </strong> 发色为浅橙红棕，发饰是一个流奶黑巧克力。头顶的呆毛类似于“@”。不过其实是另外两种特殊符号<span class="hover-text">来源于某一天看见桌上的磁铁和幻视的磁场</span></h4>
+                <h4><strong> c. </strong> 眼睛里闪烁着紫色。（锦鲤酱最喜欢的颜色）</h4>
+                <h4><strong> c. </strong> 日常服饰是浅黄色的连衣裙，或者红白色的JK服饰</h4>
+                <h4><strong> c. </strong> 开心是最重要的！她永远是那么开心！</h4>
+                <br>
+
+                <h2>丨历程丨</h2> 
+                <p>2020年接触自媒体行业。最早的时候在Minecraft里面是一个建筑玩家，喜欢各种建筑。</p>
+                <p>因此早期的梦想是：成为镇子上的出名的建筑师律师顺便开个糕点店。后面又变成了写小说。<span class="hover-text">又变成了自媒体，又变成了开网店。最后又变回了自媒体和J-Pop为主的跨行业工作</span></p>
+                <p>2021年12月26日第一次在<span class="jump-link" data-link="https://space.bilibili.com/531231667">Bilibili平台</span>上面投稿了<span class="jump-link" data-link="https://www.bilibili.com/video/BV1hY411p7un">第一个视频</span>。</p>
+                <p>2022年9月30日成立<span style="color: rgb(172, 127, 3);">白梓TeAm工作室</span>。开始四处招揽宝藏UP主</p>
+                <small>ps： [ 但是因为性格原因和很多人起过冲突。也被一些人欺骗过 ] </small>
+                <p>2023年10月上旬，在医院检测出患有重度抑郁症，休学居家开始了兼顾学业和自媒体的路线</p>
+                <p>2024年4月中旬<span style="color: rgb(172, 3, 3);">解散白梓TeAm工作室</span>，正式成为独立UP主。</p>
+                <p>后面学习了一系列内容，并且开始成为<span style="color: rgb(241, 40, 181);">J-Pop音乐人</span>。<strong>建立了属于自己的跨行业文化融合生态圈。</strong><span class="strikethrough"style="color: rgb(0, 62, 0);">简称：各种内容都做一点</span></p>
+                <small><span class="hover-text"> （ 早期还在西瓜视频投过稿，不过视频质量都不是很高 ） </span></small>
+
+                <h2>丨病历丨</h2>
+                <p><strong>心理病情：</strong> <span class="hover-text">目前患有双相障碍，重度抑郁症，中度焦虑症，广泛性焦虑，强迫症，情感依赖症</span> </p>
+                <p><strong>生理病情：</strong> <span class="hover-text">低血糖，贫血</span> </p>
+                <br>
+
+                <h2>丨轶事丨</h2> 
+                <p>性别比较中性。</strong> <span class="hover-text">正是因为这个原因，曾经跨性过一段时间，但是因为自己的观念放弃了</span></p>
+                <p><strong>具有挑食的习惯</strong>，不喜欢海鲜水产，和同样讨厌海鲜的小涵半斤八两。</p>
+                <p>最喜欢的书之一是陀思妥耶夫斯基的<strong>《罪与罚》</strong>。<span class="hover-text">这本书第一次出现在2024年生日给自己买了《罪与罚》，但是粘在桌上损坏了。后续被当成“锦鲤酱一级藏品”</span></p>
+                <p>最喜欢的番剧之一是芳文社的<strong>《请问您今天要来点兔子吗》</strong></p>
+                <p><span class="strikethrough"style="color: rgb(0, 62, 0);">只要困了就会变得傲娇</span></p>
+                <p>自创了<strong>“12532”调式</strong>，用于类似<strong>J-Pop的中国乐器演奏</strong></p>
+                <p>超级喜欢<strong>咖啡</strong>和<strong>黑巧克力</strong>，<span class="strikethrough"style="color: rgb(0, 62, 0);">可以轻易被驯服。</span>（最喜欢的咖啡是卡布奇诺）</p>
+                <p>日语的锦鲤酱翻译为<strong>"ラッキーちゃん"</strong>。这实际上是<span style="color: rgb(241, 40, 181);">幸运娘</span>的意思。</p>
+                <p>英语的锦鲤酱翻译为<strong>Fish_Lucky</strong>。则是Minecraft的直接名称。翻译器通常翻译为“幸运鱼”</p>
+                <p>曾经写过<strong>《锦鲤逻辑学说》</strong>，内容主要是讲怎么<u><span class="text-box-underline">一层层层（x10000）逻辑套路</span></u>，但是越写越冗杂，后面就放弃了。</p>
+                <p>有一个存放所有灵感的文档，名字就叫做<strong>脑洞空间</strong>，和脑洞系列的视频集合名字是一样的。（不过是系列名参照了这个文档名）</p>
+
+
+                <h2>丨角色歌曲丨</h2> 
+                <h3><strong>时代幽灵</strong></h3>
+                <p><strong>演唱/编曲/作曲/作词/母带处理/MV制作：Fish锦鲤酱</strong></p>
+                <p>歌曲状态：未发布</p>
+                <p><span class="hover-text">呐~要成为时代的幽灵呐！！！</span></p> 
+
+                <h2>丨留言丨</h2> 
+                <p><strong>2025年会更加努力，给大家疯狂撒好运！ 快乐生活才是人生真谛，一切物质构造精神需求，简简单单快快乐乐创造自我价值。</strong></p>
+                <p><strong>耶！<span style="color: rgb(230, 62, 230);">许人以乐~缘作长乐！！！</span>ε=ε=(ノ≧∇≦)ノ</strong></p>
+                <p><strong>开心，开心，我是魔法小甜饼！(≧∇≦)ﾉ这是一句魔法咒语哦，心中默念就会开心和带来好运。</strong></p>
+                <p><strong>希望世界上所有人都能快乐的生活下去！</strong></p>
+                <p><strong>ラッキーちゃん（皆様、楽しいひとときをお過ごしください!）</strong></p>
+            </div>
+
+            <!-- 人物插图和表格 -->
+            <div class="character-info">
+                <div class="character-image">
+                    <div class="character-name">可可酱</div>
+                    <img src="图片\坠入海底（浴）.png" alt="可可酱插图">
+                    <br>
+                    <div class="character-title">基本信息</div>
+                </div>
+                <div class="character-table">
+                    <table>
+                        <tr>
+                            <td>生日</td>
+                            <td>10月19日</td>
+                        </tr>
+                        <tr>
+                            <td>血型</td>
+                            <td>A型</td>
+                        </tr>
+                        <tr>
+                            <td>星座</td>
+                            <td>天秤座</td>
+                        </tr>
+                        <tr>
+                            <td>五行</td>
+                            <td>长流水命</td>
+                        </tr>
+                        <tr>
+                            <td>MBTI</td>
+                            <td>ENFP-T</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 小涵QwQ内容 -->
+        <div id="yuhan-content" class="tab-content">
+            <div class="header-image">
+                <img class="tag-background" src="图片\MC皮肤背景图（小涵）.png" alt="小涵背景">
+            </div>
+            <div class="content-text">
+                <h2><strong>小涵QwQ（宇创小涵）</strong></h2>
+                <small>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</small>
+                <p></p>
+
+                <!-- 名言区域 -->
+                <div class="quote">
+                    <span class="quote-symbol">“</span>
+                    <p class="quote-text">
+                        <span class="quote-content"></span>
+                        <strong>祝你有开心的一天哦～(∠・ω< )⌒★</strong>
+                    </p>
+                    <span class="quote-symbol">”</span>
+                </div>
+
+                <!-- 小字署名 -->
+                <p class="quote-author2">—— 小涵QwQ</p>
+
+                <h2><strong>小涵QwQ（yuhan2680）</strong></h2>
+                <p><span class="jump-link" data-link="https://space.bilibili.com/549633102">Bilibili官方频道</span></p>
+                <p><span class="strikethrough">简介</span></p>
+                <p><span class="hover-text">这是一个隐藏的文字，鼠标悬停显示</span></p>
+            </div>
+
+            <!-- 人物插图和表格 -->
+            <div class="character-info">
+                <div class="character-image">
+                    <div class="character-name">小涵QwQ</div>
+                    <img src="图片\小涵.png" alt="涵涵1插图">
+                    <br>
+                    <div class="character-title">基本信息</div>
+                </div>
+                <div class="character-table">
+                    <table>
+                        <tr>
+                            <td>生日</td>
+                            <td>07月11日</td>
+                        </tr>
+                        <tr>
+                            <td>血型</td>
+                            <td>O型</td>
+                        </tr>
+                        <tr>
+                            <td>星座</td>
+                            <td>巨蟹座</td>
+                        </tr>
+                        <tr>
+                            <td>五行</td>
+                            <td>壁上土</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 辞安内容 -->
+        <div id="Cian-content" class="tab-content">
+            <div class="header-image">
+                <img class="tag-background" src="图片\MC皮肤背景图（辞安）.png" alt="辞安背景">
+            </div>
+            <div class="content-text">
+                <h2><strong>辞安</strong></h2>
+                <small>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</small>
+                <p></p>
+
+                <!-- 名言区域 -->
+                <div class="quote">
+                    <span class="quote-symbol">“</span>
+                    <p class="quote-text">
+                        <span class="quote-content"></span>
+                        <strong>终治愁愈四季秋，病洒扬尘于谷间。</strong>
+                    </p>
+                    <span class="quote-symbol">”</span>
+                </div>
+
+                <!-- 小字署名 -->
+                <p class="quote-author2">—— 锦鲤酱</p><span class="hover-text">（没错，这句格言还是锦鲤酱写的。取自锦鲤酱寻风集诗选《惊病》）</span>
+
+                <h2><strong>辞安</strong></h2>
+                <p>这是一个极其神秘的人，他甚至没有简介！</p>
+                <p><span class="jump-link" data-link="https://space.bilibili.com">Bilibili</span></p>
+                <p><span class="strikethrough">神秘</span></p>
+                <p><span class="hover-text">神秘</span></p>
+            </div>
+        </div>
+    </div>
+
+            <!-- 白梓TeAm内容 -->
+            <div id="BaiZi-content" class="tab-content">
+                <div class="header-image">
+                    <img class="tag-background" src="图片\白梓Team（Logo）.png" alt="白梓TeAm（Logo）背景">
+                </div>
+                <div class="content-text">
+                    <h2><strong>白梓TeAm</strong></h2>
+                    <small>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</small>
+                    <p></p>
+    
+                    <!-- 名言区域 -->
+                    <div class="quote">
+                        <span class="quote-symbol">“</span>
+                        <p class="quote-text">
+                            <span class="quote-content"></span>
+                            <strong>创新着为观众服务吧！</strong>
+                        </p>
+                        <span class="quote-symbol">”</span>
+                    </div>
+    
+                    <!-- 小字署名 -->
+                    <p class="quote-author（TeAm）">—— 工作室理念</p>
+
+                    <h2><strong>白梓TeAm（白汐文化传播有限工作室）</strong></h2>
+                    <p>这是<strong>可可酱历史</strong>存在过非常久一段时间的<strong>工作室</strong>，现如今已经成为了一段<strong>历史</strong>。我们不知道这个工作室在未来会不会恢复</p>
+                    <p>不过<span class="jump-link" data-link="https://space.bilibili.com/3546386962319622">工作室官方账号</span>依旧还在Bilibili1保留了账号。</p>
+                    <p><strong>白梓TeAm工作室成立于2022年9月30日，正式解散于2024年4月15日。</strong></p>
+                    <p>事实上，最开始是因为粉丝<span class="strikethrough">谏言</span>成立的。</p>
+                    <p><span class="hover-text">于是当晚就设计了Logo成立了这个小小的工作室。</span></p>
+
+                    <h2>丨简介丨</h2> 
+                    <p>这个工作室虽然最后没有办成，但是整体对<strong>锦鲤酱</strong>的发展有着极大的影响作用。</p>
+
+                    <h2>丨轶事丨</h2> 
+                    <p><strong>锦鲤酱和小涵最初认识</strong>正是因为白梓TeAm工作室的<strong>招募</strong>。</p>
+                    <p><strong>《锦鲤逻辑学说》</strong>诞生于这一时期，最早作为工作室互相学习交流。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 彩海内容 -->
+         <div id="color-sea-content" class="tab-content">
+            <div class="header-image">
+                <img class="tag-background" src="图片/坠落（分色版）.png" alt="彩海封面">
+            </div>
+            <div class="content-text">
+                <h2><strong>彩海（さいかい）</strong></h2>
+                <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                <p></p>
+
+                <!-- 名言区域 -->
+                <div class="quote">
+                    <span class="quote-symbol">“</span>
+                    <p class="quote-text">
+                        <span class="quote-content"></span>
+                        <strong>走到世界的尽头，发呆望着海</strong>
+                    </p>
+                    <span class="quote-symbol">”</span>
+                </div>
+
+                <!-- 小字署名 -->
+                <p class="quote-author">—— 《彩海》歌词</p>
+
+                <h2><strong>彩海（Colorful Sea / さいかい）</strong></h2>
+                <p>这是<strong>可可酱</strong>，制作的<strong>第一首<span style="color: rgb(230, 62, 230);">日系喜剧流行音乐</span>（J-Pop）</strong>首曲MV和歌曲同步发布在<span class="jump-link" data-link="https://space.bilibili.com/531231667">Bilibili平台</span>以及<span class="jump-link" data-link="https://www.youtube.com/@Fish_Lucky">YouTube平台</p></p>
+                <p>歌曲上架了：网易云、酷狗音乐、QQ音乐、YouTube Music、Spotify</p>
+
+                <h2>丨简介丨</h2>
+                <p>这首歌的 <strong>编曲/作曲/作词/演唱/混音/母带处理/MV制作/动态处理/作画/原画/动画/建模/后期</strong> 均由可可酱（锦鲤酱）一人完成！</p>
+                <p>本首歌隐喻可可酱过往的历程，并且她希望以此激励大家能够坚强的活下去。</p>
+                <h3><strong>“希望是雪地里的救援直升机，它总会有一天找到你的位置！”</strong>（你坚持的每一刻都是超级厉害的！）</h3>
+                <p>这首歌<strong><span class="strikethrough">符合可可酱的ENFP-T调性</span></strong></p>
+                <p></p>
+
+                <h2>丨故事情节丨</h2>
+                <p><strong>这首歌曲的情节的简要概述：</strong></p>
+                <p><strong> [ 前奏 ] </strong>一个女孩独自行驶在茫茫大海上，迷路了。</p>
+                <p><strong> [ 间奏 ] </strong>蒙太奇：主角坠入海中，被海水冲上岸边</p>
+                <p><strong> [ 主歌A ] </strong>她独自漂泊，航行前往自己向往的地点。过程却并不是一帆风顺，误入了一片冰封的海洋，颜色逐渐消失。最后遭遇风暴，被冲上岛屿。</p>
+                <p><strong> [ 副歌变奏 ] </strong>主角在海水中回忆过往，想着来时的路</p>
+                <p><strong> [ 主歌B ] </strong>她被困岛屿，船只破损，只能被迫在岛屿上生存。过程很艰难、想放弃、想离开世界，但是都没有成功。最后下定决心要拼命活下去</p>
+                <p><strong> [ 预副歌 ] </strong>她艰难的挺过了对于她来说的一整个冬天。届时，冰消雪融，灰色融化。<span style="color: rgb(230, 62, 230);">彩色的世界又奔赴眼前。</span></p>
+                <p><strong> [ 副歌 ] </strong>她与自己相片里的人一起离开了这片岛屿，这片困住她的岛屿。她的梦想和追求突然在此刻就全部实现。一切都是如此美好。或许生活本该如此。</p>
+                <p><strong> [ 尾奏 ] </strong>故事的结尾，女孩从床上醒来。看着碌碌无为的自己略显失落。窗外一片彗星划过。或许...今天就是改变的时刻吧！！！</p>
+                <p></p>
+
+                <h2>丨歌曲制作相关丨</h2>
+                <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                <p></p>
+
+                <h2>丨官方资源提供丨</h2>
+                    <p>
+                        A.下载《彩海》歌词文件：
+                        <a href="/files/《彩海》歌词文件.rar" download>
+                            《彩海》歌词文件.rar
+                        B.下载《彩海(Instrument)》文件：
+                        <a href="/files/《彩海（Instrument）》文件.rar" download>
+                            《彩海（Instrument）》文件.rar
+                        </a>
+                    </p>   
+                <h2>丨版权许可&作者留言丨</h2>
+                <p><strong>遵循CC BY-NC许可证（署名-非商业性使用）</strong></p>
+                <p>非常感谢你支持我的歌曲！！！</p>
+                <p>不管是自己学着唱还是翻唱我都<strong><span style="color: rgb(218, 21, 185);">超级开心的！（真的耶~）</span></strong></p>
+                <p>这首歌曲的 词&曲 <strong>完全支持你们创作，翻唱，以及在视频里面做配乐使用！（包括Instrument）</strong></p>
+                <p>可以选择不提及我的名字，不过也可以选择提及和<span style="color: rgb(238, 0, 0);">“@”</span>我！！！我可以来支持你们！爱心~💖</p>
+                <p>唯一的限制：不允许<strong>直接的</strong>商业性贩卖、倒卖，<strong>不尊重的改编行为</strong>，<u>未经允许的</u>商用行为。</p>
+                <p>其他情况请联系邮箱：fish_1019@foxmail.com</p>
+            </div>
+        </div>
+
+                <!-- 未来窗内容 -->
+                <div id="Future-Windows-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/未来窗户.png" alt="未来窗封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>Future Windows（未来窗户）</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>看过去未来的人们，这样纠缠着我</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《Future Windows》歌词</p>
+        
+                        <h2><strong>Future Windows（未来窗户）</strong></h2>
+                        <p>这是<strong>可可酱</strong>，制作的一首<strong>苦中作乐的<span style="color: rgb(230, 62, 230);">日系流行音乐</span>（J-Pop）</strong>首曲MV和歌曲同步发布在<span class="jump-link" data-link="https://space.bilibili.com/531231667">Bilibili平台</span>以及<span class="jump-link" data-link="https://www.youtube.com/@Fish_Lucky">YouTube平台</p></p>
+                        <p>歌曲上架了：网易云、酷狗音乐、QQ音乐、YouTube Music、Spotify（现在还没有）</p>
+        
+                        <h2>丨简介丨</h2>
+                        <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+                <!-- 京城誓言内容 -->
+                <div id="Chinese-J-pop-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/京城誓言.png" alt="京城誓言封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>京城誓言</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>只许此刻，京城盛世</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《京城誓言》歌词</p>
+        
+                        <h2><strong>京城誓言</strong></h2>
+                        <p>这是<strong>可可酱</strong>，制作的一首<strong>中国乐器演奏的<span style="color: rgb(230, 62, 230);">日系流行音乐</span>（J-Pop）</strong>首曲MV和歌曲同步发布在<span class="jump-link" data-link="https://space.bilibili.com/531231667">Bilibili平台</span>以及<span class="jump-link" data-link="https://www.youtube.com/@Fish_Lucky">YouTube平台</p></p>
+                        <p>歌曲上架了：网易云、酷狗音乐、QQ音乐、YouTube Music、Spotify（现在还没有）</p>
+        
+                        <h2>丨简介丨</h2>
+                        <p><strong>这首歌采用了可可酱独创的</strong></p>
+                        <h3>“12532”调式</h3>
+                        <p>因为中国古代的<strong>宫商角徽羽</strong>并没有西方的<u>“F”调和“B”调</u>。于是这首歌里面。可可酱尝试用<strong><span style="color: rgb(139, 5, 5);">“12532”调式</span></strong>来代替日系流行音乐里面的“4536”调式。</p>
+                        <p>暂时没有其他内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+                <!-- 折跃愿存星内容 -->
+                <div id="Zhe-Yue-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/折跃愿存星.png" alt="折跃愿存星封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>折跃愿存星</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>热气好像不是吹向我这里，而是未来......与过去。</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《折跃愿存星》作品原文</p>
+        
+                        <h2><strong>折跃愿存星</strong></h2>
+                        <p>这是<strong>锦鲤酱</strong>的<strong>第一本成书</strong></p>
+                        <p>早名为“灾难破世之本质”</p>
+                        <p>锦鲤酱初中写的作品，是他写的第一本<strong>科幻小说</strong></p>
+        
+                        <h2>丨简介丨</h2>
+                        <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+                <!-- 拟世内容 -->
+                <div id="Ni-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/拟世.png" alt="拟世封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>拟世</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>就比如我们不会去和一只蚂蚁争你死我活，而是饶有趣味的看着他</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《拟世》作品原文</p>
+        
+                        <h2><strong>拟世</strong></h2>
+                        <p></p>
+        
+                        <h2>丨简介丨</h2>
+                        <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+                <!-- 里世界内容 -->
+                <div id="In-World-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/里世界.png" alt="里世界封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>里世界</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>这是三个世界的共鸣，世界的尽头。</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《里世界》作品原文</p>
+        
+                        <h2><strong>里世界</strong></h2>
+                        <p></p>
+        
+                        <h2>丨简介丨</h2>
+                        <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+                <!-- 消失内容 -->
+                <div id="[0]-content" class="tab-content">
+                    <div class="header-image">
+                        <img class="tag-background" src="图片/消失.png" alt="消失封面">
+                    </div>
+                    <div class="content-text">
+                        <h2><strong>消失</strong></h2>
+                        <p>可可百科，黑巧融于其中！若需使用内容，可以标明引自可可百科。内容可用于创作，不可直接用于商业活动。</p>
+                        <p></p>
+        
+                        <!-- 名言区域 -->
+                        <div class="quote">
+                            <span class="quote-symbol">“</span>
+                            <p class="quote-text">
+                                <span class="quote-content"></span>
+                                <strong>现在他醒了，贯穿整个人类历史，所有人都是不同时空的他。</strong>
+                            </p>
+                            <span class="quote-symbol">”</span>
+                        </div>
+        
+                        <!-- 小字署名 -->
+                        <p class="quote-author">—— 《消失》作品原文</p>
+        
+                        <h2><strong>消失</strong></h2>
+                        <p></p>
+        
+                        <h2>丨简介丨</h2>
+                        <p>暂时没有内容哦~ヾ(◍°∇°◍)ﾉﾞ</p>
+                    </div>
+                </div>
+
+        <!-- 版权声明 -->
+        <div class="footer">
+            <p>&copy; 2025 Choco Wiki. All rights reserved.</p>
+        </div>
+    </main>
+
+    <script src="Choco Wiki.js"></script>
+</body>
+</html>
+
+<!-- 音效文件播放器 -->
+<audio id="soundPlayer" src="" preload="auto"></audio>
+
+    <script>
+        // 音效文件列表，确保这些文件位于你的Web服务器上
+        var soundFiles = [
+    'Organ音色交互/C5.mp3',
+    'Organ音色交互/D5.mp3',
+    'Organ音色交互/E5.mp3',
+    // 更多音效文件...
+        ];
+
+    // 为所有按钮和可点击元素添加点击事件监听器
+    document.querySelectorAll('button, .image-container, .text-container').forEach(function(element) {
+        element.addEventListener('click', function() {
+            var randomSound = soundFiles[Math.floor(Math.random() * soundFiles.length)];
+            var soundPlayer = document.getElementById('soundPlayer');
+            soundPlayer.src = randomSound;
+            soundPlayer.play();
+        });
+    });
+</script>
